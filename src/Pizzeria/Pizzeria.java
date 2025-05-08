@@ -1,4 +1,4 @@
-package Pizzeria; // Paquete al que pertenece esta clase
+package Pizzeria; // Paquete al que pertenece la clase
 import java.util.Scanner; // Importación de la utilidad Scanner para leer inputs
 public class Pizzeria { // Inicio de la clase (Pizzeria)
     public static void main(String[] args) { // Inicio del programa

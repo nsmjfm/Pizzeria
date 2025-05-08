@@ -1,4 +1,4 @@
-package Pizzeria; // Paquete al que pertenece esta clase
+package Pizzeria; // Paquete al que pertenece la clase
 public class Pizza { // Inicio de la clase (Pizza)
     String nombre; // Nombre de la pizza
     int precio; // Precio de la pizza
@@ -10,6 +10,6 @@ public class Pizza { // Inicio de la clase (Pizza)
         System.out.println("**** " + nombre + " por un precio de $" + precio + " pesos"); // Imprime la información de la pizza
     } // Fin del proceso que muestra la información de la pizza
     public int calculoPrecio(int cantidad) { // Inicio del proceso que calcula el precio de las pizzas en el pedido
-        return precio * cantidad; // Retorna el precio (precio * cantidad)
+        return precio * cantidad; // Retorna el precio total de las pizzas en pedido (precio * cantidad)
     } // Fin del proceso que calcula el precio de las pizzas en el pedido
 } // Fin de la clase (Pizza)
