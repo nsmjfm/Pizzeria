@@ -45,19 +45,19 @@ public class Pizzeria { // Inicio de la clase (Pizzeria)
                         System.out.println("\n" + decoracion); // Imprime la decoración del menú de resumen
                         if(pedidoPepperoni > 0){ // Inicio del proceso si, verifica si hay pizzas en el pedido
                             System.out.println("Pepperoni: " + pedidoPepperoni); // Imprime el mensaje de pizzas en pedido
-                            totalPago = totalPago + pizzaPepperoni.calculoPrecio(pedidoPepperoni); // Calcula el precio total de las pizzas y lo suma al acumulador
+                            totalPago += pizzaPepperoni.calculoPrecio(pedidoPepperoni); // Calcula el precio total de las pizzas y lo suma al acumulador
                         } // Fin del proceso si, verifica si hay pizzas en el pedido
                         if(pedidoVegetariana > 0){ // Inicio del proceso si, verifica si hay pizzas en el pedido
                             System.out.println("Vegetariana: " + pedidoVegetariana); // Imprime el mensaje de pizzas en pedido
-                            totalPago = totalPago + pizzaVegetariana.calculoPrecio(pedidoVegetariana); // Calcula el precio total de las pizzas y lo suma al acumulador
+                            totalPago += pizzaVegetariana.calculoPrecio(pedidoVegetariana); // Calcula el precio total de las pizzas y lo suma al acumulador
                         } // Fin del proceso si, verifica si hay pizzas en el pedido
                         if(pedidoNapolitana > 0){ // Inicio del proceso si, verifica si hay pizzas en el pedido
                             System.out.println("Napolitana: " + pedidoNapolitana); // Imprime el mensaje de pizzas en pedido
-                            totalPago = totalPago + pizzaNapolitana.calculoPrecio(pedidoNapolitana); // Calcula el precio total de las pizzas y lo suma al acumulador
+                            totalPago += pizzaNapolitana.calculoPrecio(pedidoNapolitana); // Calcula el precio total de las pizzas y lo suma al acumulador
                         } // Fin del proceso si, verifica si hay pizzas en el pedido
                         if(pedidoJamonQueso > 0){ // Inicio del proceso si, verifica si hay pizzas en el pedido
                             System.out.println("Jamón-Queso: " + pedidoJamonQueso); // Imprime el mensaje de pizzas en pedido
-                            totalPago = totalPago + pizzaJamonQueso.calculoPrecio(pedidoJamonQueso); // Calcula el precio total de las pizzas y lo suma al acumulador
+                            totalPago += pizzaJamonQueso.calculoPrecio(pedidoJamonQueso); // Calcula el precio total de las pizzas y lo suma al acumulador
                         } // Fin del proceso si, verifica si hay pizzas en el pedido
                         if(pedidoPepperoni == 0 && pedidoVegetariana == 0 && pedidoNapolitana == 0 && pedidoJamonQueso == 0){ // Inicio del proceso si, verifica si hay pizzas en el pedido
                             System.out.println("**** No has agregado pizzas a tu pedido"); // Imprime el mensaje de aviso, no hay pizzas en el pedido
@@ -91,19 +91,19 @@ public class Pizzeria { // Inicio de la clase (Pizzeria)
                                 agregadoPizza = leer.nextInt(); // Recibe la opción elegida del menú de agregado de pizzas
                                 switch (agregadoPizza){ // Inicio del proceso de opciones del menú de agregado de pizzas
                                     case 1: // Inicio de la opción 1 (Agregar pizza pepperoni)
-                                        pedidoPepperoni = pedidoPepperoni + 1; // Suma 1 al contador de pizzas pepperoni en el pedido
+                                        pedidoPepperoni += 1; // Suma 1 al contador de pizzas pepperoni en el pedido
                                         System.out.println("**** Pizza pepperoni agregada al pedido");
                                         break; // Fin de la opción 1
                                     case 2: // Inicio de la opción 2 (Agregar pizza vegetariana)
-                                        pedidoVegetariana = pedidoVegetariana + 1; // Suma 1 al contador de pizzas vegetarianas en el pedido
+                                        pedidoVegetariana += 1; // Suma 1 al contador de pizzas vegetarianas en el pedido
                                         System.out.println("**** Pizza vegetariana agregada al pedido");
                                         break; // Fin de la opción 2
                                     case 3: // Inicio de la opción 3 (Agregar pizza napolitana)
-                                        pedidoNapolitana = pedidoNapolitana + 1; // Suma 1 al contador de pizzas napolitanas en el pedido
+                                        pedidoNapolitana += 1; // Suma 1 al contador de pizzas napolitanas en el pedido
                                         System.out.println("**** Pizza napolitana agregada al pedido");
                                         break; // Fin de la opción 3
                                     case 4: // Inicio de la opción 4 (Agregar pizza jamón-queso)
-                                        pedidoJamonQueso = pedidoJamonQueso + 1; // Suma 1 al contador de pizzas jamón-queso en el pedido
+                                        pedidoJamonQueso += 1; // Suma 1 al contador de pizzas jamón-queso en el pedido
                                         System.out.println("**** Pizza jamón-queso agregada al pedido");
                                         break; // Fin de la opción 4
                                     case 5: // Inicio de la opción 5 (Volver)
@@ -139,7 +139,7 @@ public class Pizzeria { // Inicio de la clase (Pizzeria)
                                             System.out.println("**** No tienes pizzas pepperoni en tu pedido"); // Imprime el mensaje a enviar cuando no hay pizzas que eliminar
                                             break; // Fin temprano de la opción 1 porque no hay pizzas que eliminar
                                         } // Fin del proceso si, verifica que hayan pizzas en el pedido
-                                        pedidoPepperoni = pedidoPepperoni - 1; // Resta 1 al contador de pizzas pepperoni en el pedido
+                                        pedidoPepperoni -= 1; // Resta 1 al contador de pizzas pepperoni en el pedido
                                         System.out.println("**** Pizza pepperoni eliminada del pedido");
                                         break; // Fin de la opción 1
                                     case 2: // Inicio de la opción 2 (Eliminar pizza vegetariana)
@@ -147,7 +147,7 @@ public class Pizzeria { // Inicio de la clase (Pizzeria)
                                             System.out.println("**** No tienes pizzas vegetarianas en tu pedido"); // Imprime el mensaje a enviar cuando no hay pizzas que eliminar
                                             break; // Fin temprano de la opción 2 porque no hay pizzas que eliminar
                                         } // Fin del proceso si, verifica que hayan pizzas en el pedido
-                                        pedidoVegetariana = pedidoVegetariana - 1; // Resta 1 al contador de pizzas vegetarianas en el pedido
+                                        pedidoVegetariana -= 1; // Resta 1 al contador de pizzas vegetarianas en el pedido
                                         System.out.println("**** Pizza vegetariana eliminada del pedido");
                                         break; // Fin de la opción 2
                                     case 3: // Inicio de la opción 3 (Eliminar pizza napolitana)
@@ -155,7 +155,7 @@ public class Pizzeria { // Inicio de la clase (Pizzeria)
                                             System.out.println("**** No tienes pizzas napolitanas en tu pedido"); // Imprime el mensaje a enviar cuando no hay pizzas que eliminar
                                             break; // Fin temprano de la opción 3 porque no hay pizzas que eliminar
                                         } // Fin del proceso si, verifica que hayan pizzas en el pedido
-                                        pedidoNapolitana = pedidoNapolitana - 1; // Resta 1 al contador de pizzas napolitanas en el pedido
+                                        pedidoNapolitana -= 1; // Resta 1 al contador de pizzas napolitanas en el pedido
                                         System.out.println("**** Pizza napolitana eliminada del pedido");
                                         break; // Fin de la opción 3
                                     case 4: // Inicio de la opción 4 (Eliminar pizza jamón-queso)
@@ -163,7 +163,7 @@ public class Pizzeria { // Inicio de la clase (Pizzeria)
                                             System.out.println("**** No tienes pizzas jamón-queso en tu pedido"); // Imprime el mensaje a enviar cuando no hay pizzas que eliminar
                                             break; // Fin temprano de la opción 4 porque no hay pizzas que eliminar
                                         } // Fin del proceso si, verifica que hayan pizzas en el pedido
-                                        pedidoJamonQueso = pedidoJamonQueso - 1; // Resta 1 al contador de pizzas jamón-queso en el pedido
+                                        pedidoJamonQueso -= 1; // Resta 1 al contador de pizzas jamón-queso en el pedido
                                         System.out.println("**** Pizza jamón-queso eliminada del pedido");
                                         break; // Fin de la opción 4
                                     case 5: // Inicio de la opción 5 (Volver)
@@ -184,16 +184,16 @@ public class Pizzeria { // Inicio de la clase (Pizzeria)
                     case 5: // Inicio de la opción 5 (Pago)
                         totalPago = 0; // Definición de totalPago a 0 para volver a hacer el cálculo correctamente
                         if(pedidoPepperoni > 0){ // Inicio del proceso si, verifica si hay pizzas en el pedido
-                            totalPago = totalPago + pizzaPepperoni.calculoPrecio(pedidoPepperoni); // Calcula el precio total de las pizzas y lo suma al acumulador
+                            totalPago += pizzaPepperoni.calculoPrecio(pedidoPepperoni); // Calcula el precio total de las pizzas y lo suma al acumulador
                         } // Fin del proceso si, verifica si hay pizzas en el pedido
                         if(pedidoVegetariana > 0){ // Inicio del proceso si, verifica si hay pizzas en el pedido
-                            totalPago = totalPago + pizzaVegetariana.calculoPrecio(pedidoVegetariana); // Calcula el precio total de las pizzas y lo suma al acumulador
+                            totalPago += pizzaVegetariana.calculoPrecio(pedidoVegetariana); // Calcula el precio total de las pizzas y lo suma al acumulador
                         } // Fin del proceso si, verifica si hay pizzas en el pedido
                         if(pedidoNapolitana > 0){ // Inicio del proceso si, verifica si hay pizzas en el pedido
-                            totalPago = totalPago + pizzaNapolitana.calculoPrecio(pedidoNapolitana); // Calcula el precio total de las pizzas y lo suma al acumulador
+                            totalPago += pizzaNapolitana.calculoPrecio(pedidoNapolitana); // Calcula el precio total de las pizzas y lo suma al acumulador
                         } // Fin del proceso si, verifica si hay pizzas en el pedido
                         if(pedidoJamonQueso > 0){ // Inicio del proceso si, verifica si hay pizzas en el pedido
-                            totalPago = totalPago + pizzaJamonQueso.calculoPrecio(pedidoJamonQueso); // Calcula el precio total de las pizzas y lo suma al acumulador
+                            totalPago += pizzaJamonQueso.calculoPrecio(pedidoJamonQueso); // Calcula el precio total de las pizzas y lo suma al acumulador
                         } // Fin del proceso si, verifica si hay pizzas en el pedido
                         if(descuento == 1){ // Inicio del proceso si, calcula descuento si hay uno activo
                             totalPago = (int) (totalPago * 0.90); // Calculo del descuento (10% menos)
@@ -346,16 +346,16 @@ public class Pizzeria { // Inicio de la clase (Pizzeria)
                                      case 1: // Inicio de la opción 1 (Salir)
                                          totalPago = 0; // Definición de totalPago a 0 para volver a hacer el cálculo correctamente
                                          if(pedidoPepperoni > 0){ // Inicio del proceso si, verifica si hay pizzas en el pedido
-                                             totalPago = totalPago + pizzaPepperoni.calculoPrecio(pedidoPepperoni); // Calcula el precio total de las pizzas y lo suma al acumulador
+                                             totalPago += pizzaPepperoni.calculoPrecio(pedidoPepperoni); // Calcula el precio total de las pizzas y lo suma al acumulador
                                          } // Fin del proceso si, verifica si hay pizzas en el pedido
                                          if(pedidoVegetariana > 0){ // Inicio del proceso si, verifica si hay pizzas en el pedido
-                                             totalPago = totalPago + pizzaVegetariana.calculoPrecio(pedidoVegetariana); // Calcula el precio total de las pizzas y lo suma al acumulador
+                                             totalPago += pizzaVegetariana.calculoPrecio(pedidoVegetariana); // Calcula el precio total de las pizzas y lo suma al acumulador
                                          } // Fin del proceso si, verifica si hay pizzas en el pedido
                                          if(pedidoNapolitana > 0){ // Inicio del proceso si, verifica si hay pizzas en el pedido
-                                             totalPago = totalPago + pizzaNapolitana.calculoPrecio(pedidoNapolitana); // Calcula el precio total de las pizzas y lo suma al acumulador
+                                             totalPago += pizzaNapolitana.calculoPrecio(pedidoNapolitana); // Calcula el precio total de las pizzas y lo suma al acumulador
                                          } // Fin del proceso si, verifica si hay pizzas en el pedido
                                          if(pedidoJamonQueso > 0){ // Inicio del proceso si, verifica si hay pizzas en el pedido
-                                             totalPago = totalPago + pizzaJamonQueso.calculoPrecio(pedidoJamonQueso); // Calcula el precio total de las pizzas y lo suma al acumulador
+                                             totalPago += pizzaJamonQueso.calculoPrecio(pedidoJamonQueso); // Calcula el precio total de las pizzas y lo suma al acumulador
                                          } // Fin del proceso si, verifica si hay pizzas en el pedido
                                          if(descuento == 1){ // Inicio del proceso si, calcula descuento si hay uno activo
                                              totalPago = (int) (totalPago * 0.90); // Calculo del descuento (10% menos)
